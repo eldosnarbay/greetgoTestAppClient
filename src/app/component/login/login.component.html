@@ -1,0 +1,20 @@
+<div>
+  <div>
+
+    <form name="form-signin" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+      <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+
+      <div>
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username" required />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required />
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+  </div>
+</div>
